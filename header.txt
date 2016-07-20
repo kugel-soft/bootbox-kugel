@@ -1,5 +1,5 @@
 /**
- * bootbox.js v4.4.0
+ * bootbox-kugel v4.4.1
  *
  * http://bootboxjs.com/license.txt
  */
