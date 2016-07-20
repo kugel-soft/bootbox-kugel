@@ -176,11 +176,11 @@
       }
 
       if (!button.className) {
-        if (total <= 2 && index === total-1) {
+        if (total <= 2 && index === 0) { // primary is always the most left one
           // always add a primary to the main option in a two-button dialog
           button.className = "btn-primary";
         } else {
-          button.className = "btn-default";
+          button.className = "btn-inverse";
         }
       }
     });
@@ -321,7 +321,8 @@
   exports.confirm = function() {
     var options;
 
-    options = mergeDialogOptions("confirm", ["cancel", "confirm"], ["message", "callback"], arguments);
+    // display confirm before cancel
+    options = mergeDialogOptions("confirm", ["confirm","cancel"], ["message", "callback"], arguments);
 
     /**
      * overrides; undo anything the user tried to set they shouldn't have
