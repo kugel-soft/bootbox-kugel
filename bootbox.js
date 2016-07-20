@@ -180,7 +180,7 @@
           // always add a primary to the main option in a two-button dialog
           button.className = "btn-primary";
         } else {
-          button.className = "btn-inverse";
+          button.className = "btn-default";
         }
       }
     });
