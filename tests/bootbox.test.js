@@ -124,8 +124,8 @@ describe("Bootbox", function() {
           var d2 = bootbox.confirm("foo", function() { return true; });
           this.labels = {
             ok: d1.find(".btn:first").text(),
-            cancel: d2.find(".btn:first").text(),
-            confirm: d2.find(".btn:last").text()
+            cancel: d2.find(".btn:last").text(),
+            confirm: d2.find(".btn:first").text()
           };
         });
 
@@ -149,8 +149,8 @@ describe("Bootbox", function() {
         var d2 = bootbox.confirm("foo", function () { return true; });
         this.labels = {
           ok: d1.find(".btn:first").text(),
-          cancel: d2.find(".btn:first").text(),
-          confirm: d2.find(".btn:last").text()
+          cancel: d2.find(".btn:last").text(),
+          confirm: d2.find(".btn:first").text()
         };
       });
 
