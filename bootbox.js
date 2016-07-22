@@ -82,7 +82,11 @@
     // show the dialog immediately by default
     show: true,
     // dialog container
-    container: "body"
+    container: "body",
+    // primary button class name
+    btnPrimaryClassName: "btn-primary",
+    // default button class name
+    btnDefaultClassName: "btn-default"
   };
 
   // our public object; augmented after our private API
@@ -178,9 +182,9 @@
       if (!button.className) {
         if (total <= 2 && index === 0) { // primary is always the most left one
           // always add a primary to the main option in a two-button dialog
-          button.className = "btn-primary";
+          button.className = options.btnPrimaryClassName;
         } else {
-          button.className = "btn-default";
+          button.className = options.btnDefaultClassName;
         }
       }
     });

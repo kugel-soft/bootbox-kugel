@@ -183,4 +183,40 @@ describe("bootbox.setDefaults", function() {
       });
     });
   });
+
+  describe("btnPrimaryClassName", function() {
+    describe("when not set", function() {
+      it("should be btn-primary", function() {
+        bootbox.setDefaults({});
+        this.dialog = bootbox.confirm({ message: "test" }, function(){});
+        expect(this.dialog.find(".btn:first").hasClass("btn-primary")).to.be.true;
+      });
+    });
+
+    describe("when set to my-class", function() {
+      it("should be my-class", function() {
+        bootbox.setDefaults( { btnPrimaryClassName: "my-class" } );
+        this.dialog = bootbox.confirm({ message: "test" }, function(){});
+        expect(this.dialog.find(".btn:first").hasClass("my-class")).to.be.true;
+      });
+    });
+  });
+
+  describe("btnDefaultClassName", function() {
+    describe("when not set", function() {
+      it("should be btn-default", function() {
+        bootbox.setDefaults({});
+        this.dialog = bootbox.confirm({ message: "test" }, function(){});
+        expect(this.dialog.find(".btn:last").hasClass("btn-default")).to.be.true;
+      });
+    });
+
+    describe("when set to my-class", function() {
+      it("should be my-class", function() {
+        bootbox.setDefaults( { btnDefaultClassName: "my-class" } );
+        this.dialog = bootbox.confirm({ message: "test" }, function(){});
+        expect(this.dialog.find(".btn:last").hasClass("my-class")).to.be.true;
+      });
+    });
+  });
 });
